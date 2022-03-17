@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { Card } from "../../components/Card/Card";
-import { data } from "../../mocks/data";
+import { api } from "../../services/api"
 
 import "./Home.css";
 
@@ -9,7 +9,7 @@ export function Home() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    setCharacters(data)
+    api.get("/all").then(response => setCharacters(response.data))
   }, [])
 
   return (
