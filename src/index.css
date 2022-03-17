@@ -10,3 +10,16 @@ body {
   background-color: #1a1a1a;
   color: #fff;
 }
+
+body, html{
+  height: 100%;
+  width: 100%;
+}
+
+#root{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
