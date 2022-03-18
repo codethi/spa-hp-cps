@@ -1,6 +1,7 @@
 import "./ConfirmDeleteModal.css";
 import { api } from "../../services/api";
 import Modal from "react-modal";
+import { BiX } from "react-icons/bi";
 
 export function ConfirmDeleteModal(props) {
   const handleDeleteCharacter = async () => {
@@ -21,7 +22,7 @@ export function ConfirmDeleteModal(props) {
         className="close-modal-button"
         onClick={props.closeModal}
       >
-        x
+        <BiX />
       </button>
 
       <h2 className="text-delete">

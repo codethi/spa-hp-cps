@@ -3,6 +3,7 @@ import "./NewCharacterModal.css";
 import Modal from "react-modal";
 import { useState } from "react";
 import { api } from "../../services/api";
+import { BiX } from "react-icons/bi";
 
 Modal.setAppElement("#root");
 
@@ -31,7 +32,7 @@ export function NewCharacterModal({ isOpen, closeModal, onCreate }) {
       className="content-react-modal"
     >
       <button type="button" className="close-modal-button" onClick={closeModal}>
-        x
+        <BiX />
       </button>
       <h2>Criar Personagem</h2>
       <form onSubmit={handleCreateNewCharacter}>

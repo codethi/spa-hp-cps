@@ -16,7 +16,7 @@ export function Card(props) {
   }
   return (
     <>
-      <section className="card" onClick={handleOpenUpdateCharacterModal}>
+      <section className="card" onClick={handleOpenUpdateCharacterModal} data-tooltip="Clique no card para editar ou excluir">
         <img src={props.image} alt="" />
         <div className="card-text">
           <h3 className="card-title">{props.name}</h3>

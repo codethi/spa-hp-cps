@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import { useState } from "react";
 import { api } from "../../services/api";
 import { ConfirmDeleteModal } from "../ConfirmDeleteModal/ConfirmDeleteModal";
+import { BiX } from "react-icons/bi";
 
 Modal.setAppElement("#root");
 
@@ -66,7 +67,7 @@ export function UpdateCharacterModal(props) {
           className="close-modal-button"
           onClick={props.closeModal}
         >
-          x
+          <BiX />
         </button>
         <h2>Editar Personagem</h2>
         <form>
