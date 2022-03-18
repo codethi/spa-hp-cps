@@ -3,7 +3,7 @@ import "./About.css";
 export function About() {
   return (
     <section className="content">
-      <h1 className="about">O Universo Harry Potter</h1>
+      <h2 className="about">O Universo Harry Potter</h2>
 
       <div className="content-text">
         <div className="text">
