@@ -45,6 +45,7 @@ export function Home() {
               house={char.house}
               image={char.image}
               actor={char.actor}
+              onEdit={onChangeCharacter}
             />
           );
         })}
