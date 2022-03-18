@@ -8,7 +8,7 @@ import "./Home.css";
 
 export function Home() {
   const [characters, setCharacters] = useState([]);
-
+  const [refreshCharacters, setRefreshCharacters] = useState(0);
   const [isNewCharacterModalOpen, setIsNewCharacterModalOpen] = useState(false);
 
   function handleOpenNewCharacterModal() {
@@ -19,11 +19,13 @@ export function Home() {
     setIsNewCharacterModalOpen(false);
   }
 
-  function onChangeCharacter() {}
+  function onChangeCharacter() {
+    setRefreshCharacters(refreshCharacters + 1);
+  }
 
   useEffect(() => {
     api.get("/all").then((response) => setCharacters(response.data));
-  }, []);
+  }, [refreshCharacters]);
 
   return (
     <>
@@ -37,8 +39,8 @@ export function Home() {
         {characters.map((char) => {
           return (
             <Card
-              key={`char_${char.id}`}
-              id={char.id}
+              key={`char_${char._id}`}
+              id={char._id}
               name={char.name}
               house={char.house}
               image={char.image}
